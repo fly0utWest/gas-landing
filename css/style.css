@@ -1,7 +1,65 @@
-html,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 715px) {
+  header {
+    justify-content: right;
+  }
+  header .nav ul {
+    display: none;
+  }
+  header .nav .burger {
+    display: block;
+  }
+}
+.burger {
+  display: none;
+}
+
 body {
+  background: white;
+  color: rgb(76, 76, 76);
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
+  font-size: 14px;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  padding: 1rem;
+  background-color: black;
+}
+header a {
+  color: white;
+}
+
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.nav ul li:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0.4rem;
+  text-align: left;
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */
