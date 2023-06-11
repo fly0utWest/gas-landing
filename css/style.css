@@ -209,6 +209,7 @@ main {
   background: rgb(255, 210, 0);
   padding: 2rem 2rem;
   user-select: none;
+  margin: 0 5%;
 }
 .advertising h2 {
   font-family: "Montserrat-variable";
@@ -231,4 +232,80 @@ main {
 }
 .advertising .advertising__right__cont p {
   font-weight: 400;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+.pricing h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.pricing .pricing__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.pricing .pricing__date {
+  background: rgb(255, 210, 0);
+  height: 2em;
+  width: 10rem;
+}
+.pricing .pricing-tab {
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+  width: 72%;
+  height: 40rem;
+  border: 0.2rem solid rgb(225, 225, 225);
+  margin-top: 1.5rem;
+}
+.pricing .pricing-tab__row1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.3rem;
+  border-bottom: 0.1rem solid rgb(225, 225, 225);
+}
+.pricing .pricing-tab__row1:hover {
+  background-color: rgb(249, 249, 249);
+}
+.pricing .pricing-tab__row1 .pricing__category {
+  padding: 0 0.3em;
+  height: 100%;
+  border: 0.1rem solid rgb(225, 225, 225);
+  border-radius: 5%;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.pricing .pricing-tab__row1 .pricing__category:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.pricing .pricing-tab__row2 {
+  display: grid;
+  grid-template-columns: repeat(1fr, 5);
+  grid-template-rows: repeat(1fr, 6);
+  margin: 0.5rem 1rem;
+}
+.pricing .pricing-tab__row2 .fuel__type {
+  border-bottom: 0.1rem solid rgb(225, 225, 225);
+}
+.pricing .pricing-tab__row2 .fuel__type--last {
+  border-bottom: 0;
+}
+.pricing .pricing-tab__row2 .fuel__type--last:hover {
+  background-color: rgb(249, 249, 249);
+}
+.pricing .pricing-tab__row2 .fuel__type:hover {
+  background-color: rgb(249, 249, 249);
+}
+.pricing .pricing-tab__row2 .fuel__params {
+  display: grid;
+  grid-template-columns: 1fr;
 }/*# sourceMappingURL=style.css.map */
