@@ -11,6 +11,11 @@
   header .nav .burger {
     display: block;
   }
+  .header-second {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 .burger {
   display: none;
@@ -23,6 +28,10 @@
   cursor: pointer;
 }
 
+.fa-phone {
+  color: rgb(51, 51, 51);
+}
+
 html {
   display: flex;
   flex-direction: column;
@@ -33,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   background: white;
-  color: rgb(76, 76, 76);
+  color: black;
   width: 100vw;
   height: 100vh;
   font-size: 14px;
@@ -49,7 +58,7 @@ header {
   width: 100%;
   color: white;
   padding: 1rem;
-  background-color: black;
+  background-color: rgb(51, 51, 51);
 }
 header a {
   color: white;
@@ -76,7 +85,7 @@ footer {
   bottom: 0;
   text-align: left;
   padding: 1rem;
-  background: black;
+  background: rgb(51, 51, 51);
   color: white;
 }
 
@@ -87,8 +96,22 @@ main {
 
 .header-second {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 15rem;
-  padding: 0 10rem;
+  padding: 1rem 10rem;
+  border-bottom: 0.1rem solid rgb(51, 51, 51);
+}
+
+.logo__container {
+  width: 12rem;
+  height: 12rem;
+}
+.logo__container img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.phone__number {
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
