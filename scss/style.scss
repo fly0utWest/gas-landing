@@ -14,6 +14,7 @@
 html {
   @include flex-column;
   font-size: 14px;
+  font-family: "Montserrat-variable";
 }
 
 body {
@@ -63,8 +64,6 @@ a {
 
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
   text-align: left;
   padding: 1rem;
   background: $black;
@@ -141,6 +140,45 @@ main {
 .content {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100%;
+  padding: 1.5rem 3rem;
+}
+
+.advertising {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-self: center;
+  height: 10rem;
+  background: $yellow;
+  padding: 2rem 2rem;
+  user-select: none;
+  
+  h2 {
+    font-family: "Montserrat-variable";
+    font-size: 3rem;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-family: "Montserrat-variable";
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  #{&}__left__cont {
+    width: 80%;
+  }
+
+  #{&}__right__cont {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    text-align: center;
+    
+    p {
+      font-weight: weight(regular);
+    }
+  }
 }

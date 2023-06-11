@@ -4,7 +4,17 @@
   margin: 0;
 }
 
-@media screen and (max-width: 715px) {
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat/static/Montserrat-Regular.ttf");
+  font-family: "Montserrat-bold";
+  src: url("../fonts/montserrat/static/Montserrat-Bold.ttf");
+  font-family: "Montserrat-bold";
+  src: url("../fonts/montserrat/");
+  font-family: "Montserrat-variable";
+  src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@media screen and (max-width: 752px) {
   header .nav ul {
     display: none;
   }
@@ -63,6 +73,7 @@ html {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  font-family: "Montserrat-variable";
 }
 
 body {
@@ -110,8 +121,6 @@ a {
 
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
   text-align: left;
   padding: 1rem;
   background: rgb(51, 51, 51);
@@ -186,6 +195,40 @@ main {
 .content {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100%;
+  padding: 1.5rem 3rem;
+}
+
+.advertising {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-self: center;
+  height: 10rem;
+  background: rgb(255, 210, 0);
+  padding: 2rem 2rem;
+  user-select: none;
+}
+.advertising h2 {
+  font-family: "Montserrat-variable";
+  font-size: 3rem;
+}
+.advertising p {
+  text-transform: uppercase;
+  font-family: "Montserrat-variable";
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.advertising .advertising__left__cont {
+  width: 80%;
+}
+.advertising .advertising__right__cont {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+}
+.advertising .advertising__right__cont p {
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
