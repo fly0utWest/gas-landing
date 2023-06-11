@@ -1,0 +1,19 @@
+$primary-color: rgb(0, 0, 0);
+$yellow: rgb(255,210,0);
+$text-black: rgb(76, 76, 76);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

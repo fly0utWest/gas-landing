@@ -2,12 +2,19 @@
 @import "./media-queries";
 @import "./icons";
 
+html {
+  @include flex-column;
+  font-size: 14px;
+}
+
 body {
+  @include flex-column;
   background: white;
   color: $text-black;
   width: 100vw;
   height: 100vh;
   font-size: 14px;
+  flex: 1 auto;
 }
 
 header {
@@ -44,9 +51,23 @@ a {
 }
 
 footer {
+  width: 100%;
   position: fixed;
-  bottom: 0.4rem;
+  bottom: 0;
   text-align: left;
   padding: 1rem;
+  background: black;
+  color: white;
 }
 
+main {
+  width: 100%;
+  margin-top: 3.1rem;
+}
+
+.header-second {
+  @include flex-column;
+  width: 100%;
+  height: 15rem;
+  padding: 0 10rem;
+}

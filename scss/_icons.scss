@@ -1,0 +1,11 @@
+.burger {
+    display: none;
+    width: 1rem;
+
+    .fa-bars {
+        font-size: 1rem;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
