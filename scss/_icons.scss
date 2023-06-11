@@ -1,9 +1,14 @@
+.fa-solid {
+    color: $black;
+}
+
 .burger {
     display: none;
     width: 1rem;
 
     .fa-bars {
         font-size: 1rem;
+        color: white;
     }
     &:hover {
         cursor: pointer;
@@ -13,3 +18,17 @@
 .fa-phone {
     color: $black;
 }
+
+.icons__block {
+    .fa-telegram {
+        color: #0088cc;
+    }
+
+    .fa-vk {
+        color: #45668e
+    }
+
+    .fa-odnoklassniki {
+        color: #ed812b
+    }
+} 
