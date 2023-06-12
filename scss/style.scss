@@ -155,6 +155,7 @@ main {
   padding: 2rem 2rem;
   user-select: none;
   margin: 0 5%;
+  overflow: hidden;
   
   h2 {
     font-family: "Montserrat-variable";
@@ -246,11 +247,25 @@ main {
 
     &__row2 {
       display: grid;
-      grid-template-columns: repeat(1fr, 5);
-      grid-template-rows: repeat(1fr, 5);
-      margin: 0.5rem 1rem;
+      grid-template-rows: 10fr repeat(5, 25fr);
+      margin: 0rem 1rem 0.5rem 1rem;
 
-      
+      .fuel__type--header {
+        display: grid;
+        grid-template-columns: 66fr repeat(2, 33fr 66fr);
+
+        .fuel__spec {
+          padding: 1rem;
+          text-align: center;
+          line-height: 1rem;
+          border-right: 0.1rem solid $border-white;
+        }
+      }
+
+      .fuel__type {
+        display: grid;
+        grid-template-columns: 66fr repeat(2, 33fr 66fr);
+      }
     }
   }
 }
