@@ -290,22 +290,6 @@ main {
 .pricing .pricing-tab__row2 {
   display: grid;
   grid-template-columns: repeat(1fr, 5);
-  grid-template-rows: repeat(1fr, 6);
+  grid-template-rows: repeat(1fr, 5);
   margin: 0.5rem 1rem;
-}
-.pricing .pricing-tab__row2 .fuel__type {
-  border-bottom: 0.1rem solid rgb(225, 225, 225);
-}
-.pricing .pricing-tab__row2 .fuel__type--last {
-  border-bottom: 0;
-}
-.pricing .pricing-tab__row2 .fuel__type--last:hover {
-  background-color: rgb(249, 249, 249);
-}
-.pricing .pricing-tab__row2 .fuel__type:hover {
-  background-color: rgb(249, 249, 249);
-}
-.pricing .pricing-tab__row2 .fuel__params {
-  display: grid;
-  grid-template-columns: 1fr;
 }/*# sourceMappingURL=style.css.map */

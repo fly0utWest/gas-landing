@@ -247,28 +247,10 @@ main {
     &__row2 {
       display: grid;
       grid-template-columns: repeat(1fr, 5);
-      grid-template-rows: repeat(1fr, 6);
+      grid-template-rows: repeat(1fr, 5);
       margin: 0.5rem 1rem;
 
-      .fuel__type {
-        border-bottom: 0.1rem solid $border-white;
-
-        &--last {
-          border-bottom: 0;
-
-          &:hover {
-            background-color: $background-white;
-          }
-        }
-
-        &:hover {
-          background-color: $background-white;
-        }
-      }
-      .fuel__params {
-        display: grid;
-        grid-template-columns: 1fr ;
-      }
+      
     }
   }
 }
