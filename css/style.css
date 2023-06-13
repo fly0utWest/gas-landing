@@ -260,8 +260,9 @@ main {
 .pricing .pricing-tab {
   display: grid;
   grid-template-rows: 1fr 9fr;
-  width: 72%;
-  height: 40rem;
+  max-width: 72%;
+  min-width: fit-content;
+  max-height: 100%;
   border: 0.2rem solid rgb(225, 225, 225);
   margin-top: 1.5rem;
 }
@@ -295,15 +296,32 @@ main {
 }
 .pricing .pricing-tab__row2 .fuel__type--header {
   display: grid;
-  grid-template-columns: 66fr repeat(2, 33fr 66fr);
+  grid-template-columns: 100fr repeat(2, 60fr 100fr);
 }
-.pricing .pricing-tab__row2 .fuel__type--header .fuel__spec {
-  padding: 1rem;
+.pricing .pricing-tab__row2 .fuel__type--header .fuel__spec, .pricing .pricing-tab__row2 .fuel__type--header .fuel__spec--last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
   text-align: center;
   line-height: 1rem;
   border-right: 0.1rem solid rgb(225, 225, 225);
+  border-bottom: 0.1rem solid rgb(225, 225, 225);
 }
-.pricing .pricing-tab__row2 .fuel__type {
+.pricing .pricing-tab__row2 .fuel__type--header .fuel__spec--last {
+  border-right: none;
+}
+.pricing .pricing-tab__row2 .fuel__type, .pricing .pricing-tab__row2 .fuel__type--last {
   display: grid;
-  grid-template-columns: 66fr repeat(2, 33fr 66fr);
+  grid-template-columns: 100fr repeat(2, 60fr 100fr);
+}
+.pricing .pricing-tab__row2 .fuel__type:hover, .pricing .pricing-tab__row2 .fuel__type--last:hover {
+  background-color: rgb(249, 249, 249);
+}
+.pricing .pricing-tab__row2 .fuel__type__element {
+  display: flex;
+  border-bottom: 0.1rem solid rgb(225, 225, 225);
+}
+.pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element {
+  border-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
