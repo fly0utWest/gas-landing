@@ -60,6 +60,10 @@
   color: #ed812b;
 }
 
+.fa-droplet {
+  font-size: 1.5rem;
+}
+
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -90,10 +94,10 @@ body {
 }
 
 header {
-  position: fixed;
-  z-index: 2;
   display: flex;
   flex-direction: row;
+  position: fixed;
+  z-index: 2;
   justify-content: center;
   width: 100%;
   color: white;
@@ -211,6 +215,7 @@ main {
   user-select: none;
   margin: 0 5%;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .advertising h2 {
   font-family: "Montserrat-variable";
@@ -265,10 +270,12 @@ main {
   max-height: 100%;
   border: 0.2rem solid rgb(225, 225, 225);
   margin-top: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgb(202, 202, 202);
 }
 .pricing .pricing-tab__row1 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem;
   gap: 0.3rem;
@@ -284,9 +291,12 @@ main {
   border-radius: 5%;
   font-weight: 300;
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .pricing .pricing-tab__row1 .pricing__category:hover {
-  background-color: white;
+  background-color: #ffdb33;
+  transition-property: background-color;
+  transition-duration: 0.2s;
   cursor: pointer;
 }
 .pricing .pricing-tab__row2 {
@@ -304,7 +314,6 @@ main {
   justify-content: center;
   padding: 0.5rem;
   text-align: center;
-  line-height: 1rem;
   border-right: 0.1rem solid rgb(225, 225, 225);
   border-bottom: 0.1rem solid rgb(225, 225, 225);
 }
@@ -318,10 +327,42 @@ main {
 .pricing .pricing-tab__row2 .fuel__type:hover, .pricing .pricing-tab__row2 .fuel__type--last:hover {
   background-color: rgb(249, 249, 249);
 }
-.pricing .pricing-tab__row2 .fuel__type__element {
+.pricing .pricing-tab__row2 .fuel__type__element, .pricing .pricing-tab__row2 .fuel__type__element--priceliter, .pricing .pricing-tab__row2 .fuel__type__element--density, .pricing .pricing-tab__row2 .fuel__type__element--date, .pricing .pricing-tab__row2 .fuel__type__element--priceton {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
   border-bottom: 0.1rem solid rgb(225, 225, 225);
 }
-.pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element {
+.pricing .pricing-tab__row2 .fuel__type__element--priceton {
+  font-weight: 500;
+}
+.pricing .pricing-tab__row2 .fuel__type__element--density {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.pricing .pricing-tab__row2 .fuel__type__element--priceliter {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--priceton, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--date, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--density, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--priceliter {
   border-bottom: 0;
+}
+.pricing .contact__manager {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(255, 210, 0);
+  border: 0.1rem solid rgb(225, 225, 225);
+  border-radius: 0.3rem;
+  transition-property: color, background-color;
+  transition: 0.2s;
+}
+.pricing .contact__manager:hover {
+  background-color: #ffdb33;
+  color: rgb(51, 51, 51);
+  transition: 0.2s;
 }/*# sourceMappingURL=style.css.map */

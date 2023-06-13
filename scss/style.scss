@@ -30,9 +30,9 @@ body {
 }
 
 header {
+  @include flex-row;
   position: fixed;
   z-index: 2;
-  @include flex-row;
   justify-content: center;
   width: 100%;
   color: white;
@@ -156,6 +156,7 @@ main {
   user-select: none;
   margin: 0 5%;
   overflow: hidden;
+  flex-shrink: 0;
   
   h2 {
     font-family: "Montserrat-variable";
@@ -218,10 +219,12 @@ main {
     max-height: 100%;
     border: 0.2rem solid $border-white;
     margin-top: 1.5rem;
+    box-shadow: 0 0.5rem  1rem rgb(202, 202, 202);
 
     &__row1 {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       align-items: center;
       padding: 0.5rem;
       gap: 0.3rem;
@@ -238,9 +241,12 @@ main {
         border-radius: 5%;
         font-weight: 300;
         font-size: 1.2rem;
+        text-transform: uppercase;
 
         &:hover {
-          background-color: lighten($background-white, 10%);
+          background-color: lighten($yellow, 10%);
+          transition-property: background-color;
+          transition-duration: 0.2s;
           cursor: pointer;
         }
       }
@@ -262,7 +268,6 @@ main {
           justify-content: center;
           padding: 0.5rem;
           text-align: center;
-          line-height: 1rem;
           border-right: 0.1rem solid $border-white;
           border-bottom: 0.1rem solid $border-white;
 
@@ -283,8 +288,33 @@ main {
 
         &__element {
           display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+          text-align: center;
           border-bottom: 0.1rem solid $border-white;
 
+          &--priceton {
+            @extend .fuel__type__element;
+            font-weight: 500
+          }
+
+          &--date {
+            @extend .fuel__type__element;
+          }
+
+          &--density {
+            @extend .fuel__type__element;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+
+          &--priceliter {
+            @extend .fuel__type__element;
+            font-weight: 500;
+            font-size: 1.1rem;
+          }
         }
       }
 
@@ -295,6 +325,23 @@ main {
           border-bottom: 0;
         }
       }
+    }
+  }
+  .contact__manager {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: $yellow;
+    border: 0.1rem solid $border-white;
+    border-radius: 0.3rem;
+    transition-property: color, background-color;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: lighten($yellow, 10%);
+      color: $black;
+      transition: 0.2s;
     }
   }
 }
