@@ -3,23 +3,24 @@
     src: url("../fonts/montserrat/static/Montserrat-Regular.ttf");
     font-family: "Montserrat-bold";
     src: url("../fonts/montserrat/static/Montserrat-Bold.ttf");
-    font-family: "Montserrat-bold";
-    src: url("../fonts/montserrat/");
-
     font-family: "Montserrat-variable";
     src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
 
 @media screen and (max-width: 752px) {
-    header {
-        
+    .burger-menu {
+        display: flex;
+    }
+    
+    .header-first {
+
         .nav {
             ul {
                 display: none;
             }
 
-            .burger {
+            .burger__wrapper {
                 display: block;
             }
         }
@@ -33,5 +34,11 @@
         .socials {
             display: none;
         }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-second {
+        flex-direction: column;
     }
 }

@@ -9,16 +9,17 @@
   src: url("../fonts/montserrat/static/Montserrat-Regular.ttf");
   font-family: "Montserrat-bold";
   src: url("../fonts/montserrat/static/Montserrat-Bold.ttf");
-  font-family: "Montserrat-bold";
-  src: url("../fonts/montserrat/");
   font-family: "Montserrat-variable";
   src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
 }
 @media screen and (max-width: 752px) {
-  header .nav ul {
+  .burger-menu {
+    display: flex;
+  }
+  .header-first .nav ul {
     display: none;
   }
-  header .nav .burger {
+  .header-first .nav .burger__wrapper {
     display: block;
   }
   .header-second {
@@ -30,19 +31,24 @@
     display: none;
   }
 }
+@media screen and (max-width: 1000px) {
+  .header-second {
+    flex-direction: column;
+  }
+}
 .fa-solid {
   color: rgb(51, 51, 51);
 }
 
-.burger {
+.burger__wrapper {
   display: none;
   width: 1rem;
 }
-.burger .fa-bars {
+.burger__wrapper .fa-bars {
   font-size: 1rem;
   color: white;
 }
-.burger:hover {
+.burger__wrapper:hover {
   cursor: pointer;
 }
 
@@ -83,6 +89,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: white;
   color: black;
   width: 100vw;
@@ -129,6 +136,15 @@ footer {
   padding: 1rem;
   background: rgb(51, 51, 51);
   color: white;
+}
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  background-color: rgb(51, 51, 51);
+  width: 90vw;
+  height: 100vh;
 }
 
 main {
@@ -179,6 +195,22 @@ main {
   text-decoration: underline;
 }
 
+.burger__wrapper {
+  display: none;
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+  width: 100%;
+}
+.burger__wrapper .burger {
+  position: relative;
+}
+.burger__wrapper .burger__button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
 .socials {
   display: flex;
   flex-direction: column;
@@ -209,12 +241,12 @@ main {
   flex-direction: row;
   width: 90%;
   align-self: center;
-  height: 10rem;
+  min-height: 10rem;
+  max-height: fit-content;
   background: rgb(255, 210, 0);
   padding: 2rem 2rem;
   user-select: none;
   margin: 0 5%;
-  overflow: hidden;
   flex-shrink: 0;
 }
 .advertising h2 {
@@ -229,10 +261,12 @@ main {
 }
 .advertising .advertising__left__cont {
   width: 80%;
+  max-width: 100%;
 }
 .advertising .advertising__right__cont {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 20%;
   text-align: center;
 }
@@ -240,6 +274,32 @@ main {
   font-weight: 400;
 }
 
+@media screen and (max-width: 1252px) {
+  .advertising {
+    flex-direction: column;
+    align-items: center;
+  }
+  .advertising__left__cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advertising__left__cont h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .advertising__left__cont p {
+    font-size: 1.4rem;
+  }
+  .advertising__right__cont {
+    display: flex;
+    width: 100%;
+  }
+  .advertising__right__cont p {
+    font-size: 1rem;
+  }
+}
 .pricing {
   display: flex;
   flex-direction: column;
@@ -259,8 +319,8 @@ main {
 }
 .pricing .pricing__date {
   background: rgb(255, 210, 0);
-  height: 2em;
-  width: 10rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .pricing .pricing-tab {
   display: grid;
@@ -306,7 +366,7 @@ main {
 }
 .pricing .pricing-tab__row2 .fuel__type--header {
   display: grid;
-  grid-template-columns: 100fr repeat(2, 60fr 100fr);
+  grid-template-columns: 100fr repeat(2, 130fr 100fr);
 }
 .pricing .pricing-tab__row2 .fuel__type--header .fuel__spec, .pricing .pricing-tab__row2 .fuel__type--header .fuel__spec--last {
   display: flex;
@@ -322,7 +382,7 @@ main {
 }
 .pricing .pricing-tab__row2 .fuel__type, .pricing .pricing-tab__row2 .fuel__type--last {
   display: grid;
-  grid-template-columns: 100fr repeat(2, 60fr 100fr);
+  grid-template-columns: 100fr repeat(2, 130fr 100fr);
 }
 .pricing .pricing-tab__row2 .fuel__type:hover, .pricing .pricing-tab__row2 .fuel__type--last:hover {
   background-color: rgb(249, 249, 249);
@@ -365,4 +425,26 @@ main {
   background-color: #ffdb33;
   color: rgb(51, 51, 51);
   transition: 0.2s;
+}
+
+.advert-delivery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  height: 72%;
+  width: 100%;
+}
+.advert-delivery .banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5%;
+  background-color: rgb(51, 51, 51);
+  height: 20rem;
+  width: 90%;
+}
+.advert-delivery .banner .slider__wrapper {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

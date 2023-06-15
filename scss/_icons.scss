@@ -2,7 +2,7 @@
     color: $black;
 }
 
-.burger {
+.burger__wrapper {
     display: none;
     width: 1rem;
 
@@ -10,8 +10,9 @@
         font-size: 1rem;
         color: white;
     }
+
     &:hover {
-        cursor: pointer;
+     cursor: pointer;
     }
 }
 

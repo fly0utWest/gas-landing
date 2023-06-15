@@ -7,10 +7,14 @@
     <title>gas</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/5a4d7c0517.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
-    <header>
+    <div class="burger-menu"></div>
+    <header class="header-first">
         <nav class="nav">
             <ul class="navlist">
                 <li class="nav__element"><a href="#">О КОМПАНИИ</a></li>
@@ -21,8 +25,11 @@
                 <li class="nav__element"><a href="#">КОНТАКТЫ</a></li>
                 <li class="nav__element"><a href="#">НОВОСТИ</a></li>
             </ul>
-            <div class="burger">
-                <i class="fa-solid fa-bars"></i>
+            <div class="burger__wrapper">
+                <button class="burger__button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
             </div>
         </nav>   
     </header>
@@ -59,8 +66,7 @@
             </div>
             <section class="pricing">
                 <div class="pricing__header">
-                    <h2>СТОИМОСТЬ НЕФТЕПРОДУКТОВ НА &nbsp</h2>
-                    <div class="pricing__date"></div>
+                    <h2>СТОИМОСТЬ НЕФТЕПРОДУКТОВ НА <span class="pricing__date">24.04.2021</span></h2>
                 </div>
                 <div class="pricing-tab">
                     <div class="pricing-tab__row1">
@@ -173,7 +179,7 @@
                                 <span>ТС-1</span>
                             </div>
                             <div class="fuel__type__element--priceton">
-                                <span>46 500 р.</span>
+                                <span>40 500 р.</span>
                             </div>
                             <div class="fuel__type__element--date">
                                 <span>13/06/2023</span>
@@ -190,8 +196,21 @@
                 <button class="contact__manager">Связаться с менеджером</button>
             </section>
             
-            <section class="advet-delivery">
+            <section class="advert-delivery">
+                <div class="banner">
+                    <div class="slider__wrapper">
+                        
+                    </div>
+                    <div class="slider__pagination">
 
+                    </div>
+                    <div class="slider__wrapper">
+
+                    </div>
+                    <div class="slider__pagination">
+
+                    </div>
+                </div>
             </section>
         </div>
     </main>
