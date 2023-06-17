@@ -4,6 +4,7 @@
 
 ::-webkit-scrollbar {
   width: 0.5rem;
+  height: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -15,6 +16,8 @@ html {
   @include flex-column;
   font-size: 14px;
   font-family: "Montserrat-variable";
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
@@ -22,8 +25,8 @@ body {
   align-items: center;
   background: white;
   color: black;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   flex: 1 auto;
   overflow-x: hidden;
@@ -85,6 +88,7 @@ main {
   width: 100%;
   margin-top: 3.1rem;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .header-second {
@@ -234,6 +238,7 @@ main {
 
         p {
           font-size: 1.4rem;
+          text-align: center;
         }
       }
 
@@ -274,6 +279,7 @@ main {
     background: $yellow;
     font-size: 2rem;
     font-weight: 500;
+    padding: 0 0.5rem;
   }
 
   #{&}-tab {
@@ -416,9 +422,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1.5rem;
-  height: 72%;
-  width: 100%;
+  padding-bottom: 3rem;
 
   .banner {
     display: flex;
@@ -434,5 +438,174 @@ main {
 
     }
   }
-  
+
+  .delivery-destination {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    min-height: 14rem;
+    max-height: max-content;
+    margin-top: 1rem;
+    background-color: $black;
+    padding: 1.5rem;
+
+    .delivery__header {
+      display: flex;
+      width: 20%;
+      align-items: center;
+      border-right: 0.2rem solid $yellow;
+      padding-right: 1rem;
+
+
+      h3 {
+        color: $yellow;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .delivery__form {
+      display: flex;
+      width: 80%;
+      align-items: center;
+      padding-left: 1rem;
+      gap: 0.4rem;
+
+      select {
+        height: 3rem;
+        width: 20rem;
+        border-radius: 0.3rem;
+      }
+
+      button {
+        height: 3rem;
+        width: 20rem;
+        border-radius: 0.3rem;
+        background-color: $yellow;
+        border: 0.1rem solid $black;
+        cursor: pointer;
+        transition-property: color, background-color;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: lighten($yellow, 10%);
+          color: $black;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .advert-delivery {
+
+    .delivery-destination {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .delivery__header {
+        width: 100%;
+        border-right: 0;
+        padding-bottom: 1rem;
+        padding-right: 0;
+        justify-content: center;
+
+        h3 {
+          border-bottom: 0.2rem solid $yellow;
+          text-align: center;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: 3rem;
+
+    .tip__element {
+      display: flex;
+      flex-direction: row;
+      width: 25%;
+      align-items: center;
+      background-color: white;
+      box-shadow: 0 0.5rem  1rem rgb(202, 202, 202);
+      border: 0.1rem solid $border-white;
+      transition: 0.2s;
+      border-radius: 0.3rem;
+      padding: 2rem;
+
+      span {
+        padding-left: 2rem;
+        font-weight: 600;
+        color: $black;
+      }
+
+      &:hover {
+        transition: 0.2s;
+        background-color: $yellow;
+      }
+    }
+  }
+
+  .banner-section2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 10rem;
+    background-color: white;
+    gap: 2%;
+
+    .tip__banner {
+      height: 100%;
+      width: 50%;
+      background-color: blue;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .banner-section2 {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1527px) {
+  .tips {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      .tip__element {
+        width: 50%;
+        min-width: fit-content;
+      }
+    }
+  }
+}
+
+.cube {
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
 }
