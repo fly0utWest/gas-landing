@@ -684,7 +684,46 @@ main {
 
   .news {
     display: flex;
+    flex-direction: row;
     width: 90%;
+    gap: 5%;
+
+    &-col1 {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+  
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+        li {
+          font-size: 1.2rem;
+        }
+  
+         li::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          content: "\f14a";
+          margin-right: 0.5rem;
+          font-size: 1.7rem;
+         }
+      }
+
+      p {
+        padding: 3rem 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
