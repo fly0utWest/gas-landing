@@ -9,10 +9,19 @@
     <script src="https://kit.fontawesome.com/5a4d7c0517.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 
 </head>
 
 <body>
+    <div class="banner__body">
+        <button class='close' id="close-button" onclick="closeAd();">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#">
+            <img src="./img/banner.jpg" alt="">
+        </a>
+    </div>
     <div class="burger-menu"></div>
     <header class="header-first">
         <nav class="nav">
@@ -39,7 +48,7 @@
                 <img src="./img/logo1.png" alt="">
             </div>
             <div class="phone__number">
-                <p><i class="fa-solid fa-phone"></i> 8 800 234 77 88</p>
+                <p><i class="fa-solid fa-phone"></i> 8 (800) 234-77-88</p>
                 <div class="phone__actions">
                     <a href="">Перезвонить мне</a>
                     <a href="">Написать</a>
@@ -262,8 +271,23 @@
             <section class="info">
                 <div class="info-container">
                     <div class="banner-area">
-                        <div class="banner__info"></div>
-                        <div class="banner__info"></div>
+                        <div class="banner__info--fuel">
+                            <div class="banner__content">
+                                <a href="#">
+                                    <h3>Как определить качество топлива</h3>
+                                    <i class="fa-solid fab fab fab fa-youtube"></i>
+                                    <p>&nbsp Смотреть ролик</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="banner__info">
+                            <div class="banner__content">
+                                <a href="#">
+                                    <h3>Свободный транспорт</h3>
+                                    <p>Проверить наличие свободных машин в вашем регионе</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="banner__info--taneko">
                         <a href="#">
@@ -373,14 +397,85 @@
                 </div>
 
             </section>
-            <!-- <section>
-                <div class="cube"></div>
-            </section> -->
-            <footer>
-                <div class="footer-header">
-
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer-header">
+                        <div class="button__container">
+                            <button href="#">
+                                Расссчитать доставку ГСМ
+                            </button>
+                            <button hfref="#">
+                                Сотрудничество
+                            </button>
+                        </div>
+                        <div class="contact-us">
+                            <span class="number__white">
+                                <a href="#">
+                                    <p>
+                                        <i class="fa-solid fa-phone-flip" style="color: white;"></i>
+                                        &nbsp 8 (800) 234-77-88
+                                    </p>
+                                </a>
+                            </span>
+                            <span class="email__link">
+                                <a href="#">Email: zakaz@agrosnab91.ru</a>
+                            </span>
+                        </div>
+                        <span class="tg__link">
+                            <a href="#">
+                                <i class="fa-solid fa fab fa-telegram"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="footer-lists">
+                        <div class="list__column">
+                            <ul>
+                                <li><a class="list__header" href="#">Главная</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Расчёт доставки</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">ЖД тарифы</a></li>
+                                <li><a href="#">Продукция</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="list__column">
+                            <ul>
+                                <li><a class="list__header2" href="#">Топливо</a></li>
+                                <li><a href="#">ДТФ</a></li>
+                                <li><a href="#">Бензин</a></li>
+                                <li><a href="#">ДТ</a></li>
+                                <li><a href="#">Керосин</a></li>
+                                <li><a href="#">Бензин</a></li>
+                                <li><a href="#">Газ</a></li>
+                                <li><a href="#">Масло</a></li>
+                                <li><a href="#">Газовый конденсат</a></li>
+                                <li><a href="#">Бензол</a></li>
+                            </ul>
+                        </div>
+                        <div class="list__column">
+                            <ul>
+                                <li><a class="list__header2" href="#">Производители</a></li>
+                                <li><a href="#">АО "ТАНЕКО"</a></li>
+                                <li><a href="#">ПАО "НИЖНЕКАМСКНЕФТЕХИМ"</a></li>
+                                <li><a href="#">ТАИФ-НК</a></li>
+                                <li><a href="#">МАРИЙСКИЙ НПЗ</a></li>
+                                <li><a href="#">ПАО АНК "БАШНЕФТЬ"</a></li>
+                                <li><a href="#">МАРИЙСКИЙ НПЗ</a></li>
+                                <li><a href="#">ЯРОСЛАВСКИЙ НПЗ ИМ.МЕНДЕЛЕЕВА (ЯНПЗ)</a></li>
+                                <li><a href="#">НПЗ "НС-ОЙЛ"</a></li>
+                                <li><a href="#">НИКОЛАЕВСКИЙ НПЗ</a></li>
+                                <li><a href="#">АНТИПИНСКИЙ НПЗ</a></li>
+                                <li><a href="#">ООО "ГАЗПРОМ НЕФТЕХИМ" САЛАВАТ</a></li>
+                                <li><a href="#">НГДУ "ЕЛХОВНЕФТЬ"</a></li>
+                                <li><a href="#">УТНИИ ООО "ГАЗПРОМ ДОБЫЧА УРЕНГОЙ"</a></li>
+                                <li><a href="#">КИЧУЙСКИЙ НПЗ</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="cube"></div>
             </footer>
         </div>
     </main>

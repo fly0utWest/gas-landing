@@ -31,6 +31,60 @@ body {
   flex: 1 auto;
   overflow-x: hidden;
   overflow-y: hidden;
+
+  .banner__body {
+    position: absolute;
+    width: 22.2rem;
+    height: 25.7rem;
+    left: -100rem;
+    bottom: 15vh;
+    animation: slideIn 0.7s forwards;
+    animation-delay: 1s;
+
+    @keyframes slideIn {
+      from {
+        left: -100rem;
+      }
+
+      to {
+        left: 0;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .close {
+      position: absolute;
+      top: 2%;
+      left: 93%;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 752px) {
+    .banner__body {
+      display: none;
+    }
+  }
+
+  .banner__body--close {
+    animation: slideOut 0.7s forwards;
+    
+    @keyframes slideOut{
+      from {
+        left: 0;
+      }
+      to {
+        left: -100rem;
+      }
+    }
+  }
 }
 
 header {
@@ -67,24 +121,182 @@ a {
   text-decoration: none;
 }
 
-footer {
-  position: relative;
+ .footer {
   align-self: center;
   display: flex;
-  left: 0;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
   text-align: left;
   padding: 1rem;
   background: $black;
   color: white;
-  min-width: 100vw;
+  min-width: fit-content;
 
-  &-header {
-    display: flex;
-    flex-direction: row;
+  .footer__container {
     width: 90%;
-    border-bottom: 0.1rem solid $border-white;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: min-content;
+    max-height: max-content;
+
+
+   .footer-header {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     border-bottom: 0.1rem solid $border-white;
+     margin-top: 2rem;
+     padding-left: 1.5rem;
+     padding-bottom: 1.5rem;
+     padding-right: 1.5rem;
+     min-width: min-content;
+     max-height: max-content;
+
+     .button__container {
+         display: flex;
+         gap: 0.5rem;
+      
+         button {
+         width: 18rem;
+         height: 3.5rem;
+         min-width: min-content;
+         max-height: max-content;
+         border-radius: 0.5rem;
+         text-transform: uppercase;
+         background-color: $yellow;
+         font-weight: 700;
+         font-size: 1rem;
+         border: 0;
+         cursor: pointer;
+         transition: 0.2s;
+
+         &:hover {
+           background-color: lighten($yellow, 10%);
+
+           transition: 0.2s;
+         }
+       }
+     }
+
+     .contact-us {
+       display: flex;
+       color: white;
+       justify-content: center;
+       align-items: center;
+       gap: 2.5rem;
+
+       a {
+         color: white;
+         font-size: 1.9rem;
+         font-weight: 700;
+       }
+
+       .email__link {
+         a {
+           font-size: 1.3rem;
+           font-weight: 400;
+           text-decoration: underline;
+         }
+       }
+     }
+
+     .tg__link {
+
+       a {
+         color: white;
+         font-size: 2.5rem;
+
+         .fa-telegram {
+           color: white;
+         }
+       }
+     }
+   }
+
+   .footer-lists {
+    display: flex;
+    gap: 10rem;
+    width: 100%;
+    flex-direction: row;
+    padding: 3rem 1.5rem;
+
+    .list__column {
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      li {
+        list-style: none;
+        color: white;
+        text-transform: uppercase;
+
+        a {
+          font-size: 1rem;
+          color: white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .list__header {
+          color: darken(white, 20%);
+          font-size: 1rem;
+
+          &:hover {
+            text-decoration: underline;
+            color: white;
+          }
+        }
+
+        .list__header2 {
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+   }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .footer {
+
+    .footer__container {
+
+      .footer-header {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .button__container {
+          flex-direction: column;
+        }
+
+        .contact-us {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+      .footer-lists {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4rem;
+      }
+    }
   }
 }
 
@@ -457,7 +669,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    min-height: 14rem;
+    min-width: min-content;
     max-height: max-content;
     margin-top: 1rem;
     background-color: $black;
@@ -530,12 +742,18 @@ main {
         padding-bottom: 1rem;
         padding-right: 0;
         justify-content: center;
+        align-items: center;
 
         h3 {
           border-bottom: 0.2rem solid $yellow;
           text-align: center;
           padding-bottom: 1rem;
         }
+      }
+      .delivery__form {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
       }
     }
   }
@@ -617,6 +835,28 @@ main {
       }
     }
   }
+
+  .info {
+
+    .info-container {
+      
+      .banner-area {
+        
+        .banner__info {
+
+          .banner__content {
+            text-align: center;
+
+            a {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .info {
@@ -638,7 +878,64 @@ main {
         display: flex;
         width: 50%;
         min-height: 10rem;
-        background-color: red;
+        background-color: $black;
+        padding: 2rem;
+        min-width: min-content;
+        max-height: max-content;
+
+        .banner__content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          gap: 0.5rem;
+          min-width: min-content;
+          max-height: max-content;
+
+          h3 {
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 400;
+          }
+        
+          p {
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .banner__info--fuel {
+        @extend .banner__info;
+
+        .banner__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1rem;
+            text-align: center;
+          }
+          
+          h3 {
+            font-weight: 700;
+          }
+
+          p {
+            font-weight: 400;
+            text-align: center;
+          }
+        }
       }
     }
 
@@ -680,6 +977,7 @@ main {
     }
 
     @media screen and (max-width: 870px) {
+      
       .banner__info--taneko {
         a {
           flex-direction: column;
@@ -810,7 +1108,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    min-height: 14rem;
+    min-width: min-content;
     max-height: max-content;
     background-color: $black;
     padding: 1.5rem;
@@ -947,6 +1245,13 @@ main {
           padding-bottom: 1rem;
         }
       }
+
+      .delivery__form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
     }
   }
 }
@@ -979,8 +1284,20 @@ main {
   }
 }
 
-.cube {
-  width: 100vw;
-  height: 100vh;
-  background-color: $black;
+@media screen and (max-width: 890px) {
+        .footer .footer__container .footer-header .contact-us a {
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 700;
+      }
+
+      ::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: lighten($black, 10%);
+    border-radius: 10%;
+  }
 }
