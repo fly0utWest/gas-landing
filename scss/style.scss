@@ -1,6 +1,7 @@
 @import "./config";
 @import "./media-queries";
 @import "./icons";
+@import "./swiper";
 
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -654,20 +655,27 @@ main {
 
   .banner {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     background-color: $black;
     height: 20rem;
     width: 90%;
     padding: 2rem;
     gap: 1rem;
-    min-width: 0;
+    min-width: 23rem;
     max-height: max-content;
-    overflow-x: hidden;
+    z-index: 1;
+    user-select: none;
 
     .slider {
       display: flex;
-      width: 50%;
+      width: 100%;
       overflow: hidden;
+      margin-left: 0;
+      margin-right: 0;
+      min-width: 21rem;
+      min-height: 14rem;
+      border-radius: 0.2rem;
 
       .slider__wrapper {
         display: flex;
@@ -681,7 +689,32 @@ main {
           .red {
             width: 100%;
             height: 100%;
-            background-color: red;
+            background-color: $yellow;
+            padding: 0.5rem;
+
+            a { 
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              color: $black;
+              text-align: center;
+
+              i {
+                margin-bottom: 1.5rem;
+              }
+              
+              h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+              }
+
+              p  {
+                font-size: 1.5rem;
+              }
+            }
           }
         }
 
@@ -692,7 +725,33 @@ main {
           .blue {
             height: 100%;
             width: 100%;
-            background-color: blue;
+            background-color: $yellow;
+            padding: 0.5rem;
+
+            a {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              color: $black;
+              text-align: center;
+            }
+
+            i {
+              margin-bottom: 1.5rem;
+            }
+            
+            h2 {
+              font-size: 2rem;
+              text-transform: uppercase;
+            }
+
+            p  {
+              font-size: 1.5rem;
+            }
+
           }
         }
       }
@@ -703,11 +762,55 @@ main {
     }
   }
 
-  @media screen and (max-width: 1400px) {
-    .banner {
-      flex-direction: column;
-      align-items: center;
+  @media screen and (max-width: 869px) {
+    .slide1 {
+
+      .red {
+
+        p {
+          font-size: 1rem !important;
+        }
+
+        h2 {
+          font-size: 1.2rem !important;
+        }
+
+        i {
+          font-size: 3rem !important;
+        }
+      }
     }
+
+    .slide2 {
+
+      .blue {
+
+        p {
+          font-size: 0.9rem !important;
+        }
+
+        h2 {
+          font-size: 1.1rem !important;
+        }
+
+        i {
+          font-size: 3rem !important;
+        }
+      }
+    }
+
+    .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-button-prev {
+      display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 1400px) {
+
   }
 
   .delivery-destination {
@@ -1345,4 +1448,12 @@ main {
     background-color: lighten($black, 10%);
     border-radius: 10%;
   }
+}
+
+.swiper-button-prev {
+  color: white !important;
+}
+
+.swiper-button-next {
+  color: white !important;
 }
