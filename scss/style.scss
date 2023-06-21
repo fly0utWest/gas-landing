@@ -90,6 +90,30 @@ body {
   }
 }
 
+.burger-menu {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  .navlist--mobile {
+    
+    li {
+      list-style: none;
+      text-align: center;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
 header {
   @include flex-row;
   position: fixed;
@@ -301,15 +325,6 @@ a {
       }
     }
   }
-}
-
-.burger-menu {
-  display: none;
-  position: fixed;
-  flex-direction: column;
-  background-color: $black;
-  width: 90vw;
-  height: 100vh;
 }
 
 main {
