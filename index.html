@@ -19,6 +19,14 @@
         </a>
     </div>
     <div class="burger-menu">
+        <div class="bm__header">
+            <div class="logo--mobile">
+                <img src="./img/logo-white.png" alt="">
+            </div>
+            <button onclick="closeBurger()" class="burger__exit">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
         <ul class="navlist--mobile">
             <li class="nav__element"><a href="#">О КОМПАНИИ</a></li>
             <li class="nav__element"><a href="#">ПРОДУКЦИЯ</a></li>
@@ -41,7 +49,7 @@
                 <li class="nav__element"><a href="#">НОВОСТИ</a></li>
             </ul>
             <div class="burger__wrapper">
-                <button class="burger__button">
+                <button onclick="openMenu()" class="burger__button">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -70,6 +78,11 @@
             </div>
         </div>
         <div class='content'>
+            <div class="spare__nav">
+                <div class="sn__option"><a href="#">Свободные автомобили</a></div>
+                <div class="sn__option"><a href="#">Перевозка</a></div>
+                <div class="sn__option"><a href="#">Что мы перевозим</a></div>
+            </div>
             <div class="advertising">
                 <div class="advertising__left__cont">
                     <h2>ОПТОВАЯ ПРОДАЖА И ДОСТАВКА СЫРЬЯ</h2>
@@ -81,7 +94,7 @@
             </div>
             <section class="pricing">
                 <div class="pricing__header">
-                    <h2>СТОИМОСТЬ НЕФТЕПРОДУКТОВ НА <span class="pricing__date">24.04.2021</span></h2>
+                    <h2>СТОИМОСТЬ НЕФТЕПРОДУКТОВ НА <span class="pricing__date" id="fuel-price-date">24.04.2021</span></h2>
                 </div>
                 <div class="pricing-tab">
                     <div class="pricing-tab__row1">
@@ -90,7 +103,7 @@
                         <button class="pricing__category">Сочи</button>
                         <button class="pricing__category">Тамань</button>
                     </div>
-                    <div class="pricing-tab__row2">
+                    <div class="pricing-tab__row2--taneko">
                         <div class="fuel__type--header">
                             <div class="fuel__spec">
                                 <span>Продукт</span>
@@ -218,7 +231,7 @@
                                 <div class="red">
                                     <a href="#">
                                         <i class="fa-solid fa-circle-check"></i>
-                                        <h2>10-летний опыт работы и отслеживание заказа</h2>
+                                        <h2>5-летний опыт работы и отслеживание заказа</h2>
                                         <p>Высокое качество дистрибуции через собственную логистическую сеть</p>
                                     </a>
                                 </div>
@@ -256,16 +269,17 @@
                     <form class="delivery__form">
                         <select>
                             <option value="0">Откуда</option>
-                            <option value="2"></option>
-                            <option value="3"></option>
-                            <option value="4"></option>
-                            <option value="5"></option>
+                            <option value="1">Краснодар</option>
+                            <option value="2">Тамань</option>
+                            <option value="3">Сочи</option>
+                            <option value="4">Ейск</option>
                         </select>
                         <select placeholder="">
-                            <option value="0">Куда</option>
-                            <option value="1"></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
+                            <option value="0">Откуда</option>
+                            <option value="1">Краснодар</option>
+                            <option value="2">Тамань</option>
+                            <option value="3">Сочи</option>
+                            <option value="4">Ейск</option>
                         </select>
                         <button>Рассчитать</button>
                     </form>
@@ -281,7 +295,7 @@
                     </div>
                     <div class="tip__element">
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>10-летний опыт работы и тысячи довольных клиентов</span>
+                        <span>5-летний опыт работы и тысячи довольных клиентов</span>
                     </div>
                     <div class="tip__element">
                         <i class="fa-solid fa-truck-fast"></i>
@@ -384,7 +398,9 @@
                         </div>
                     </div>
                     <div class="certification__area">
-
+                        <div class="certification__element">
+                            <img src="./img/taneko-banner.png" alt="">
+                        </div>
                     </div> 
                     <div class="delivery-destination">
                         <div class="delivery__header">
@@ -393,16 +409,17 @@
                         <form class="delivery__form">
                             <select>
                                 <option value="0">Откуда</option>
-                                <option value="2"></option>
-                                <option value="3"></option>
-                                <option value="4"></option>
-                                <option value="5"></option>
+                                <option value="1">Краснодар</option>
+                                <option value="2">Тамань</option>
+                                <option value="3">Сочи</option>
+                                <option value="4">Ейск</option>
                             </select>
                             <select placeholder="">
-                                <option value="0">Куда</option>
-                                <option value="1"></option>
-                                <option value="2"></option>
-                                <option value="3"></option>
+                                <option value="0">Откуда</option>
+                                <option value="1">Краснодар</option>
+                                <option value="2">Тамань</option>
+                                <option value="3">Сочи</option>
+                                <option value="4">Ейск</option>
                             </select>
                             <button>Рассчитать</button>
                         </form>

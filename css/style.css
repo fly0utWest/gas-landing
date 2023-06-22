@@ -35,6 +35,9 @@
   .header-second {
     flex-direction: column;
   }
+  .spare__nav {
+    justify-content: center;
+  }
 }
 .fa-solid {
   color: rgb(51, 51, 51);
@@ -197,22 +200,63 @@ body .banner__body--close {
 }
 
 .burger-menu {
-  display: flex;
+  display: none;
   position: absolute;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   background-color: rgb(51, 51, 51);
   width: 100vw;
   height: 100vh;
   z-index: 10;
 }
+.burger-menu .bm__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: max-content;
+  max-height: max-content;
+}
+.burger-menu .bm__header .logo--mobile {
+  max-height: max-content;
+}
+.burger-menu .bm__header .logo--mobile img {
+  width: 10rem;
+  height: 10rem;
+}
+.burger-menu .bm__header .burger__exit {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.burger-menu .bm__header .burger__exit .fa-xmark {
+  font-size: 2.5rem;
+}
+.burger-menu .navlist--mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  align-self: center;
+  margin-top: 2rem;
+}
 .burger-menu .navlist--mobile li {
+  font-size: 1.2rem;
   list-style: none;
-  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid white;
 }
 .burger-menu .navlist--mobile li a {
   color: white;
+}
+
+.burger-menu--close {
+  display: none;
+}
+
+.burger-menu--active {
+  display: flex;
 }
 
 header {
@@ -474,6 +518,41 @@ main {
   height: 100%;
   padding: 1.5rem 3rem;
 }
+.content .spare__nav {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 1rem;
+}
+.content .spare__nav .sn__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+  border-right: 0.1rem solid rgb(51, 51, 51);
+}
+.content .spare__nav .sn__option a {
+  font-size: 1rem;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.3rem;
+}
+@media screen and (max-width: 718px) {
+  .content .spare__nav {
+    flex-direction: column;
+  }
+  .content .spare__nav .sn__option {
+    border-right: 0;
+  }
+  .content .spare__nav .sn__option a {
+    border-right: 0;
+    border-bottom: 0.1rem solid rgb(51, 51, 51);
+  }
+}
 
 .advertising {
   display: flex;
@@ -568,7 +647,7 @@ main {
   grid-template-rows: 1fr 9fr;
   max-width: 72%;
   min-width: fit-content;
-  max-height: 100%;
+  max-height: max-content;
   border: 0.2rem solid rgb(225, 225, 225);
   margin-top: 1.5rem;
   box-shadow: 0 0.5rem 1rem rgb(202, 202, 202);
@@ -581,6 +660,7 @@ main {
   padding: 0.5rem;
   gap: 0.3rem;
   border-bottom: 0.1rem solid rgb(225, 225, 225);
+  max-height: max-content;
 }
 .pricing .pricing-tab__row1:hover {
   background-color: rgb(249, 249, 249);
@@ -600,16 +680,16 @@ main {
   transition-duration: 0.2s;
   cursor: pointer;
 }
-.pricing .pricing-tab__row2 {
+.pricing .pricing-tab__row2--taneko {
   display: grid;
   grid-template-rows: 10fr repeat(5, 25fr);
   margin: 0rem 1rem 0.5rem 1rem;
 }
-.pricing .pricing-tab__row2 .fuel__type--header {
+.pricing .pricing-tab__row2--taneko .fuel__type--header {
   display: grid;
   grid-template-columns: 100fr repeat(2, 130fr 100fr);
 }
-.pricing .pricing-tab__row2 .fuel__type--header .fuel__spec, .pricing .pricing-tab__row2 .fuel__type--header .fuel__spec--last {
+.pricing .pricing-tab__row2--taneko .fuel__type--header .fuel__spec, .pricing .pricing-tab__row2--taneko .fuel__type--header .fuel__spec--last {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -618,17 +698,17 @@ main {
   border-right: 0.1rem solid rgb(225, 225, 225);
   border-bottom: 0.1rem solid rgb(225, 225, 225);
 }
-.pricing .pricing-tab__row2 .fuel__type--header .fuel__spec--last {
+.pricing .pricing-tab__row2--taneko .fuel__type--header .fuel__spec--last {
   border-right: none;
 }
-.pricing .pricing-tab__row2 .fuel__type, .pricing .pricing-tab__row2 .fuel__type--last {
+.pricing .pricing-tab__row2--taneko .fuel__type, .pricing .pricing-tab__row2--taneko .fuel__type--last {
   display: grid;
   grid-template-columns: 100fr repeat(2, 130fr 100fr);
 }
-.pricing .pricing-tab__row2 .fuel__type:hover, .pricing .pricing-tab__row2 .fuel__type--last:hover {
+.pricing .pricing-tab__row2--taneko .fuel__type:hover, .pricing .pricing-tab__row2--taneko .fuel__type--last:hover {
   background-color: rgb(249, 249, 249);
 }
-.pricing .pricing-tab__row2 .fuel__type__element, .pricing .pricing-tab__row2 .fuel__type__element--priceliter, .pricing .pricing-tab__row2 .fuel__type__element--density, .pricing .pricing-tab__row2 .fuel__type__element--date, .pricing .pricing-tab__row2 .fuel__type__element--priceton {
+.pricing .pricing-tab__row2--taneko .fuel__type__element, .pricing .pricing-tab__row2--taneko .fuel__type__element--priceliter, .pricing .pricing-tab__row2--taneko .fuel__type__element--density, .pricing .pricing-tab__row2--taneko .fuel__type__element--date, .pricing .pricing-tab__row2--taneko .fuel__type__element--priceton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -637,18 +717,18 @@ main {
   text-align: center;
   border-bottom: 0.1rem solid rgb(225, 225, 225);
 }
-.pricing .pricing-tab__row2 .fuel__type__element--priceton {
+.pricing .pricing-tab__row2--taneko .fuel__type__element--priceton {
   font-weight: 500;
 }
-.pricing .pricing-tab__row2 .fuel__type__element--density {
+.pricing .pricing-tab__row2--taneko .fuel__type__element--density {
   font-size: 1.2rem;
   font-weight: 600;
 }
-.pricing .pricing-tab__row2 .fuel__type__element--priceliter {
+.pricing .pricing-tab__row2--taneko .fuel__type__element--priceliter {
   font-weight: 500;
   font-size: 1.1rem;
 }
-.pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--priceton, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--date, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--density, .pricing .pricing-tab__row2 .fuel__type--last .fuel__type__element--priceliter {
+.pricing .pricing-tab__row2--taneko .fuel__type--last .fuel__type__element, .pricing .pricing-tab__row2--taneko .fuel__type--last .fuel__type__element--priceton, .pricing .pricing-tab__row2--taneko .fuel__type--last .fuel__type__element--date, .pricing .pricing-tab__row2--taneko .fuel__type--last .fuel__type__element--density, .pricing .pricing-tab__row2--taneko .fuel__type--last .fuel__type__element--priceliter {
   border-bottom: 0;
 }
 .pricing .contact__manager {
@@ -1135,13 +1215,17 @@ main {
 }
 .info .certification__area {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
   min-width: min-content;
+  align-items: center;
   max-height: max-content;
   width: 90%;
   height: 10rem;
   border: 0.1rem solid rgb(225, 225, 225);
   margin-bottom: 1.5rem;
+  padding: 0 2rem;
 }
 .info .delivery-destination {
   display: flex;
