@@ -1,0 +1,20 @@
+user-agent: BadBot
+Disallow: /
+
+
+crawl-delay: 10
+
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.xls$
+Disallow: /*.ppt$
+
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /scss/
+
+User-agent: Yandex
+Disallow: /css/
+
+User-agent: AhrefsBot
+Disallow: /img/
